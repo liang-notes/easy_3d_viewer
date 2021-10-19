@@ -13,11 +13,16 @@ A new Flutter project.
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Your Company' => 'email@example.com' }
   s.source           = { :path => '.' }
-  s.source_files = 'Classes/**/*'
+  s.source_files = 'Classes/**/*','Frameworks/3DViewer/include/*.h'
   s.dependency 'Flutter'
-  s.platform = :ios, '8.0'
+  s.platform = :ios, '12.0'
 
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
+  # s.ios.vendored_frameworks = 'Frameworks/3DViewer/libiGolfViewer3D.a', 'Frameworks/3DViewer/*'
+  s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lz -lc++ -lObjC' }
+  s.vendored_libraries = 'Frameworks/3DViewer/libiGolfViewer3D.a'
+  s.public_header_files = 'Frameworks/3DViewer/include/*.h'
+  s.ios.resources = ['Frameworks/3DViewer/textures/*']
   s.swift_version = '5.0'
 end

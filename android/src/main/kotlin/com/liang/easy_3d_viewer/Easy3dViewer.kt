@@ -52,9 +52,10 @@ class Easy3dViewer: PlatformView {
     }
 
     private fun getCourse3DViewer(context: Context?, args: Any?): Course3DViewer {
-        val easy3dView =
-            LayoutInflater.from(context).inflate(R.layout.easy_3d_viewer, null)
-        var course3dViewer:Course3DViewer = easy3dView.findViewById<Course3DViewer>(R.id.course3DViewer)
+//        val easy3dView =
+//            LayoutInflater.from(context).inflate(R.layout.easy_3d_viewer, null)
+//        var course3dViewer:Course3DViewer = easy3dView.findViewById<Course3DViewer>(R.id.course3DViewer)
+        var course3dViewer = Course3DViewer(context)
         course3dViewer.viewer.setNavigationModeChangedListener {
             print(it.toString())
         }

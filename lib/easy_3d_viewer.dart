@@ -65,7 +65,7 @@ class _Easy3dViewRenderState extends State<Easy3dViewRender> {
   Widget _setupNativeView() {
     if (defaultTargetPlatform == TargetPlatform.android) {
       return AndroidView(
-        viewType: 'plugins.flutter.io/easy_3d_viewer_android_view',
+        viewType: 'plugins.flutter.io/easy_3d_viewer_native_view',
         onPlatformViewCreated: onPlatformViewCreated,
         creationParams: <String, dynamic>{
           'x': widget.x,
@@ -77,7 +77,7 @@ class _Easy3dViewRenderState extends State<Easy3dViewRender> {
       );
     } else {
       return UiKitView(
-        viewType: 'plugins.flutter.io/easy_3d_viewer_android_view',
+        viewType: 'plugins.flutter.io/easy_3d_viewer_native_view',
         onPlatformViewCreated: onPlatformViewCreated,
         creationParams: <String, dynamic>{
           'x': widget.x,

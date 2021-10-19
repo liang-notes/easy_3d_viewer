@@ -26,7 +26,7 @@ class Easy3dViewerPlugin: FlutterPlugin, MethodCallHandler {
     channel.setMethodCallHandler(this)
     val easy3dViewerFactory = Easy3dViewerFactory(StandardMessageCodec.INSTANCE, channel)
     flutterPluginBinding.platformViewRegistry
-      .registerViewFactory("plugins.flutter.io/easy_3d_viewer_android_view", easy3dViewerFactory)
+      .registerViewFactory("plugins.flutter.io/easy_3d_viewer_native_view", easy3dViewerFactory)
   }
 
   override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
