@@ -14,7 +14,7 @@ EXTERNAL SOURCES:
     :path: Flutter
 
 SPEC CHECKSUMS:
-  easy_3d_viewer: 66e10a84d2e9d1371e3631378d59f2f923b89aec
+  easy_3d_viewer: 52e6a9beab48f45fefbb58f042981f49a233cdc5
   Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
 
 PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c

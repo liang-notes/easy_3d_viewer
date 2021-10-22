@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flutter/services.dart';
@@ -50,11 +51,46 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
-        body: Container(
-          child: Easy3dViewRender(width:100,height:100),
-        ),
-        // Center(
-        //   child: Text('Running on: $_platformVersion\n'),
+        body: 
+        // ListView(
+        //   children: [
+            Container(
+              // height: 500,
+              child: Stack(
+                children: [
+                  Easy3dViewRender(width: 100, height: 100),
+                  TextButton(
+                    onPressed: () {
+                      print('xxxxaaaa');
+                      showCupertinoDialog(
+                          context: context,
+                          builder: (_) {
+                            return CupertinoAlertDialog(
+                              title: Text('确认删除'),
+                              actions: [
+                                CupertinoDialogAction(
+                                  child: Text('确认'),
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                ),
+                                CupertinoDialogAction(
+                                  child: Text('取消'),
+                                  isDestructiveAction: true,
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                ),
+                              ],
+                            );
+                          });
+                    },
+                    child: Text('Running on: success'),
+                  )
+                ],
+              ),
+            ),
+        //   ],
         // ),
       ),
     );

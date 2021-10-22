@@ -17,7 +17,6 @@ public class Easy3dViewer: NSObject, FlutterPlatformView {
 
         super.init()
         self.handleMethodChannel()
-
     }
 
     public func view() -> UIView {
